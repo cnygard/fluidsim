@@ -1,3 +1,3 @@
-src/main.o: src/main.cpp include/path.hpp
+src/main.o: src/main.cpp src/../include/path.hpp
 
-include/path.hpp:
+src/../include/path.hpp:
