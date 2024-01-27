@@ -10,7 +10,7 @@ class Game {
     // vars
     GameState    State;
     bool         Keys[1024];
-    unsigned int Width, Height
+    unsigned int Width, Height;
 
     // funcs
     Game(unsigned int width, unsigned int height);

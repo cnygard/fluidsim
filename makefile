@@ -3,6 +3,15 @@ CXX      := g++
 CFLAGS   := -Wall -Wextra -std=c11 -g -pedantic -I./include
 CXXFLAGS := -Wall -Wextra -std=c++17 -g -pedantic -I./include -framework OpenGL -lglfw -lassimp
 
+ifeq ($(OS),Windows_NT)
+	CC       := gcc
+	CXX      := g++
+	CFLAGS   := -Wall -Wextra -std=c11 -g -pedantic -I./include
+	CXXFLAGS := -Wall -Wextra -std=c++17 -g -pedantic -I./include -lopengl32 -lglfw3 -lassimp
+
+	PROG     := fs.exe
+endif
+
 SRC_DIR     := src
 INCLUDE_DIR := include
 CSRC        := $(wildcard $(SRC_DIR)/*.c)
